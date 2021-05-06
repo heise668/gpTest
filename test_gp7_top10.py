@@ -73,7 +73,7 @@ if __name__=="__main__":
         '芒果超媒': '300413.SZ','青海春天':'600381.SS','长航凤凰':'000520.SZ','会稽山':'601579.SS'}
 
 
-    code=group.get('会稽山').split('.')[0]
+    code=group.get('韵达股份').split('.')[0]
 
     url=url+code
     today=str(datetime.date.today().year)

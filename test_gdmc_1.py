@@ -57,7 +57,7 @@ def get_data(url,today):
 if __name__=="__main__":
     url = "http://cwzx.shdjt.com/cwcx.asp?gdmc="
 
-    name='周学琴'
+    name='钱海平'
     # print (urllib.parse.quote(name.encode('gb2312')))
     url=url+urllib.parse.quote(name.encode('gb2312'))
     today=str(datetime.date.today().year)
