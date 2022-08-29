@@ -42,8 +42,7 @@ def get_data(url,today):
         change = td[13].get_text().strip()
         changeNum = td[14].get_text().strip()
 
-        if today in date:
-            gdlist.append([seq,gpName,gpCode,gdType,date,name,gdnum,gdRatio,change,changeNum])
+        gdlist.append([seq,gpName,gpCode,gdType,date,name,gdnum,gdRatio,change,changeNum])
 
 
     # 十大流通股东
@@ -53,7 +52,7 @@ def get_data(url,today):
 if __name__=="__main__":
     url = "http://cwzx.shdjt.com/cwcx.asp?gdmc="
 
-    name='吴秀川'
+    name='华远国际陆港集团有限公司'
     # print (urllib.parse.quote(name.encode('gb2312')))
     url=url+urllib.parse.quote(name.encode('gb2312'))
     today=str(datetime.date.today().year)

@@ -34,7 +34,7 @@ def get_data(url):
 
 
 def get_list():
-    list=['杭州阿里巴巴创业投资管理有限公司',]
+    list=['葛贵兰',]
 
 
 if __name__=="__main__":

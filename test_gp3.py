@@ -65,7 +65,7 @@ for items in msg[0:]:
     title=items['Title']
     BkjInfoArr=items['BkjInfoArr']
     stock=items['Stocks']
-    print (title,"\t=group=",BkjInfoArr,"\t=stocks=",stock)
+    print (title,"\t=group=",BkjInfoArr)
     if stock is  not None:
         for stock_item in stock:
            #print(get_html(stock_item['Symbol']))

@@ -83,8 +83,8 @@ for items in msg[0:]:
     stock_code=items['symbol']
     price=items['price']  #目前价格
     surge_reason=items['surge_reason']  #涨停理由
-    stock_reason=surge_reason['stock_reason']
-    related_plates = surge_reason['related_plates']
+    # stock_reason=surge_reason['stock_reason']
+    # related_plates = surge_reason['related_plates']
     limit_up_days=items['limit_up_days'] #涨停天数
     m_days_n_boards_days=items['m_days_n_boards_days'] #(连板天数),
     first_limit_up=items['first_limit_up'] #(首次z涨停时间)
@@ -95,10 +95,11 @@ for items in msg[0:]:
     otherStyleTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
     #print(otherStyleTime)  # 2013--10--10 23:40:00
 
-    platelist=[]
-    for related_plate in related_plates:
-        platelist.append(related_plate["plate_name"])
-    print(otherStyleTime,stock_chi_name,stock_code,price,limit_up_days,"reason=",stock_reason,",plate=",platelist)
+    # platelist=[]
+    # for related_plate in related_plates:
+    #     platelist.append(related_plate["plate_name"])
+    # print(otherStyleTime,stock_chi_name,stock_code,price,limit_up_days,"reason=",stock_reason,",plate=",platelist)
+    print(otherStyleTime, stock_chi_name, stock_code, price, limit_up_days )
 
 
 

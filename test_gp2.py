@@ -37,23 +37,17 @@ def get_html(stock):
 
 if __name__=="__main__":
 
-    group={'瑞丰光电':'300241.SZ','高新兴':'300098.SZ','北汽蓝谷': '600733.SS',
-           '供销大集': '000564.SZ','达安基因':'002030.SZ',
-           '海尔智家': '600690.SS','好想你': '002582.SZ','奥马电器': '002668.SZ','世纪华通': '002602.SZ',}
-    group2={'方正证券': '601901.SS','上海物贸':'600822.SS','百联股份': '600827.SS','特锐德': '300001.SZ','杭钢股份':'600126.SS',
-            '韵达股份': '002120.SZ','岭南控股':'000524.SZ','ST加加':'002650.SZ',
-            '*ST力帆': '601777.SS','ST同洲':'002052.SZ','ST双环 ': '000707.SZ',}
-    group3={'东方能源': '000958.SZ','中文在线': '300364.SZ','跨境通 ': '002640.SZ','华金资本': '000532.SZ','华发股份': '600325.SS',}
-    group_bak={'旋极信息': '300324.SZ','广电运通': '002152.SZ','中光学':'002189.SZ',
-               '南天信息': '000948.SZ','神州信息': '000555.SZ',
-               '明德生物': '002932.SZ','圣湘生物': '688289.SS','东方生物': '688298.SS',}
+    group={'游族网络': '002174.SZ','飞凯材料': '300398.SZ','众信旅游': '002707.SZ','ST大集': '000564.SZ',
+           '瑞丰光电':'300241.SZ','高新兴':'300098.SZ','奥马电器': '002668.SZ','世纪华通': '002602.SZ',}
+    group2={'芒果超媒': '300413.SZ', '新国脉': '600640.SS','百联股份': '600827.SS','岭南控股': '000524.SZ',}
+    group3={'中文在线': '300364.SZ',}
+    group_bak={'旋极信息': '300324.SZ'}
 
 
     groups={}
     groups.update(group)
     groups.update(group2)
     groups.update(group3)
-   # groups.update(group5)
     groups.update(group_bak)
 
     for name,stock in groups.items():
@@ -71,34 +65,33 @@ if __name__=="__main__":
 
 
         stock_item.pop('换手')
-       # stock_item.pop('成交量')
+        stock_item.pop('成交量')
         stock_item.pop('流通股本')
         stock_item.pop('总股本')
-        stock_item.pop('市盈率TTM')
+        # stock_item.pop('市盈率TTM')
         # stock_item.pop('最高价')
         # stock_item.pop('最低价')
+        # stock_item.pop('涨跌')
 
         s_rise=float(stock_item.get('涨幅').strip('%'))
 
 
-
-
         if stock in group.values():
             if s_rise>0:
-                print(f'\033[0;46;0m{stock_item} \033[0m')
+                print(f'\033[1;36;0m{stock_item}\033[0m')
             else:
-                print(f'\033[0;46;0m{stock_item}\033[0m' )
+                print(f'\033[1;36;0m{stock_item}\033[0m' )
         elif stock in group2.values():
             if s_rise > 0:
 
-                print(f'\033[0;46;0m{stock_item}\033[0m')
+                print(f'\033[1;36;0m{stock_item}\033[0m')
             else:
-                print(f'\033[0;46;0m{stock_item}\033[0m')
+                print(f'\033[0;36;0m{stock_item}\033[0m')
 
         else:
             if s_rise > 0:
-                print(f'\033[0;46;0m{stock_item}\033[0m')
+                print(f'\033[1;36;0m{stock_item}\033[0m')
             else:
-                print(f'\033[0;46;0m{stock_item}\033[0m')
+                print(f'\033[0;36;0m{stock_item}\033[0m')
             #print (stock_item)
 

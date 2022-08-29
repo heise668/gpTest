@@ -124,6 +124,6 @@ if __name__=="__main__":
    # 新能源汽车，充电桩，特斯拉，蔚来汽车概念股，换电概念
 
 
-   plate_group = ["军工"]
+   plate_group = ["供销大集"]
    for plate in plate_group:
         get_data(plate)
